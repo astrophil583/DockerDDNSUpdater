@@ -28,10 +28,13 @@ def get_current_ip():
         return None
 
 def notify(ip, url_template):
+    global last_ip
     url = url_template.replace("{IP}", ip)
     print(f"Notifying {url} with IP {ip}")
     try:
-        response = requests.post(url, json={"ip": ip})
+        response = requests.get(url)
+        if response.status_code == 200:
+            last_ip = ip
         print(f"Response: {response.status_code}")
     except Exception as e:
         print(f"Failed to notify: {e}")
