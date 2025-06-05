@@ -14,7 +14,8 @@ The script:
 ## 🐳 Docker Usage
 ### Run the image
 ```bash
-docker run -d --name ddns-updater -e NOTIFY_URL="https://your.webhook.url/?ip={IP}" \
+docker run -d --name ddns-updater \
+           -e NOTIFY_URL="https://your.webhook.url/?ip={IP}" \
            -e CHECK_INTERVAL_SECONDS=300 \
            ghcr.io/astrophil583/dockerddnsupdater:latest
 ```
