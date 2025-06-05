@@ -1,3 +1,4 @@
+[![Docker](https://github.com/astrophil583/DockerDDNSUpdater/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/astrophil583/DockerDDNSUpdater/actions/workflows/docker-publish.yml)
 ![Python](https://img.shields.io/badge/python-3.11-blue)
 
 # Docker DDNS Updater
