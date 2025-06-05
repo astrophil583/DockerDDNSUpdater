@@ -1,3 +1,5 @@
+![Python](https://img.shields.io/badge/python-3.11-blue)
+
 # Docker DDNS Updater
 
 This is a lightweight Dockerized Python service that checks your machine's public IP address at regular intervals and sends a notification when it changes.
@@ -12,7 +14,7 @@ The script:
 ## 🐳 Docker Usage
 ### Run the image
 ```bash
-docker run -e NOTIFY_URL="https://your.webhook.url/?ip={IP}" \
+docker run -d --name ddns-updater -e NOTIFY_URL="https://your.webhook.url/?ip={IP}" \
            -e CHECK_INTERVAL_SECONDS=300 \
            ghcr.io/astrophil583/dockerddnsupdater:latest
 ```
