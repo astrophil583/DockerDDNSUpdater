@@ -22,7 +22,7 @@ docker run -e NOTIFY_URL="https://your.webhook.url/?ip={IP}" \
 |`NOTIFY_URL`|The url for the POST request (you can use the {ip} tag for the IP)|
 |`CHECK_INTERVAL_SECONDS`|The time between two consecutive checks|
 
-### Compile the image
+### Build the image locally
 
 ```bash
-docker build -t dockerddnsupdater .
+docker build -t dockerddnsupdater:latest .
